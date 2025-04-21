@@ -1,0 +1,14 @@
+name: Matrix Demo
+on: push
+jobs:
+  build:
+    strategy:
+      matrix:
+        node-version: [12,14,16]
+        operating-system: [ubunut-latest,windows-latest] 
+    runs-on: ${{ matrix.operating-system }}
+    steps:
+      - name: Install Node JS
+        run: npm ci
+      - name: Build project
+        run: npm run build
