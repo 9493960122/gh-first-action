@@ -16,6 +16,6 @@ jobs:
       - name: check version
         run: cat /etc/lsb-release
   thirdjob:
-    nees: [firstjob]
-    uses: ./github/workflows/second.yml
+    needs: [firstjob]
+    uses: ./.github/workflows/second.yml
 
