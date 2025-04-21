@@ -10,6 +10,7 @@ jobs:
       - name: Print Good bye
         run: echo "Bye!!!"
   secondjob:
+    needs: [firstjob]
     runs-on: Ubuntu-latest
     steps:
       - name: check version
