@@ -9,3 +9,8 @@ jobs:
         run: echo "Welcome!"
       - name: Print Good bye
         run: echo "Bye!!!"
+  secondjob:
+    runs-on: Ubuntu-latest
+    steps:
+      - name: check version
+        run: cat /etc/lsb-release
