@@ -3,7 +3,7 @@ on: [push]
 jobs:
   firstjob:
     runs-on: ubuntu-latest
-    container: centos:latest
+    container: ghcr.io/easybuilders/centos-7.9:latest
     steps:
       - name: display
         run: cat /etc/centos-release
