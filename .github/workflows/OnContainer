@@ -1,0 +1,9 @@
+name: Running on Container
+on: [push]
+jobs:
+  firstjob:
+    runs-on: ubuntu-latest
+    containers: centos:latest
+    steps:
+      - name: display
+        run: cat /etc/centos-release
