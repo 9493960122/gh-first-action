@@ -18,4 +18,9 @@ jobs:
   thirdjob:
     needs: [firstjob]
     uses: ./.github/workflows/second.yml
+  fourthjob:
+    runs-on:  Ubuntu-latest
+    steps: 
+      - name : update 
+        run: apt-get update
 
